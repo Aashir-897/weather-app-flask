@@ -8,6 +8,7 @@ app = Flask(__name__)
 CORS(app)
 CORS(app, resources={r"/*": {"origins": "*"}})  
 
+
 @app.route('/weather/by-location', methods=['GET'])
 def weather_by_location():
     city = request.args.get("city")
